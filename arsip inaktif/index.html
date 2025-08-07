@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Berkas Arsip</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      padding: 10px 5px;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    main {
+      margin-top: 100px;
+    }
+
+    /* Flexbox: gambar + 3 baris teks */
+    .info-keterangan {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .foto-keterangan {
+      flex: 0 0 100px;
+    }
+
+    .foto-keterangan img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .keterangan-kolom {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .keterangan-item {
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    td {
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Responsif untuk HP */
+    @media screen and (max-width: 768px) {
+      header h2 {
+        text-align: left;
+        font-size: 16px;
+        padding-left: 15px;
+      }
+
+      .info-keterangan {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .keterangan-kolom {
+        align-items: center;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 45%;
+        display: inline-block;
+      }
+
+      table {
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>DAFTAR ARSIP INAKTIF SEKRETARIAT DIREKTORAT JENDERAL PAUD, DIKDAS, DAN DIKMEN</h2>
+  </header>
+
+  <main>
+    <!-- Flexbox: gambar + 3 baris keterangan -->
+    <div class="info-keterangan">
+      <div class="foto-keterangan">
+        <img src="logo-kemendikdasmen.jpeg" alt="Logo Instansi" />
+      </div>
+      <div class="keterangan-kolom">
+        <p class="keterangan-item">
+          Pencipta Arsip: Sekretariat Direktorat Jenderal Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah
+        </p>
+        <p class="keterangan-item">
+          Unit Kerja: Direktorat Jenderal Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah
+        </p>
+        <p class="keterangan-item">
+          Bagian Keuangan
+        </p>
+      </div>
+    </div>
+
+    <!-- Tabel Arsip -->
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Kode Klasifikasi</th>
+          <th>Uraian Arsip</th>
+          <th>Kurun Waktu</th>
+          <th>Tingkat Perkembangan</th>
+          <th>Jumlah</th>
+          <th>No Folder</th>
+          <th>No Boks</th>
+          <th>Pencipta Arsip</th>
+          <th>Lokasi Simpan</th>
+          <th>Jangka Simpan</th>
+          <th>Nasib Akhir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="No">01</td>
+          <td data-label="Kode Klasifikasi">KU.05.02</td>
+          <td data-label="Uraian Arsip">Surat perintah membayar nomor 00421A tanggal 11 juli 2022 untuk penggantian uang persediaan untuk keperluan belanja barang sebesar Rp.128.053.403,- Kuasa pengguna anggaran pejabat penandatangan SPM Waris Handoyo</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109483</td>
+          <td data-label="No Boks">B.7227</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">------</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+           <tr>
+          <td data-label="No">02</td>
+          <td data-label="Kode Klasifikasi">KU.05.02</td>
+          <td data-label="Uraian Arsip">Surat permintaan pembayaran nomor 00598T tanggal 29 sep 2022 untuk pertanggungjawaban tambahan uang persediaan untuk keperluan belanja barang sebesar Rp.293.055.400,- Kuasa pengguna anggaran pejabat pembuat komitmen Arifin,S.A.P</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109484</td>
+          <td data-label="No Boks">B.7227</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">------</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+           <tr>
+          <td data-label="No">03</td>
+          <td data-label="Kode Klasifikasi">KU.05.02</td>
+          <td data-label="Uraian Arsip">Surat permintaan pembayaran nomor 00296T tangal 03 jun 2022 untuk pertanggungjawaban tambahan uang persediaan untuk keperluan belanja barang sebesar Rp.226.200.000,- Pejabat pembuat komitmen Arifin, S.A.P</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109485</td>
+          <td data-label="No Boks">B.7227</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">------</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+           <tr>
+          <td data-label="No">04</td>
+          <td data-label="Kode Klasifikasi">KU.05.02</td>
+          <td data-label="Uraian Arsip">Surat perintah membayar nomor 00103A tanggal 16 maret 2022 untuk pertanggungjawaban tambahan uang persediaan untuk keperluan belanja barang sebesar Rp.141.280.000,- Pejabat penandatangan SPM Waris Handoyo,S.E</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109486</td>
+          <td data-label="No Boks">B.7227</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">------</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+           <tr>
+          <td data-label="No">05</td>
+          <td data-label="Kode Klasifikasi">KU.05.02</td>
+          <td data-label="Uraian Arsip">Surat permintaan pembayaran nomor 00424T tanggal 11 juli 2022 untuk pertanggungjawaban tambahan uang persediaan untuk keperluan belanja barang sebesar Rp.83.360.000,- Pejabat pembuat komitmen Arifin,S.A.P</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109487</td>
+          <td data-label="No Boks">B.7227</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">------</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
